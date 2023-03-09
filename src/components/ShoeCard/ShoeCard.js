@@ -51,17 +51,26 @@ const ShoeCard = ({
 };
 
 const Link = styled.a`
+  flex: 1 1 275px;
+  max-width: 475px;
   text-decoration: none;
   color: inherit;
 `;
 
-const Wrapper = styled.article``;
+const Wrapper = styled.article`
+  margin-bottom: 32px; 
+`;
 
 const ImageWrapper = styled.div`
   position: relative;
+  border-radius: 16px 16px 4px 4px;
+  overflow: hidden;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+`;
 
 const Row = styled.div`
   font-size: 1rem;
