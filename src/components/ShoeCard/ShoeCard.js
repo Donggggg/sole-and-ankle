@@ -4,6 +4,7 @@ import styled from 'styled-components/macro';
 import { COLORS, WEIGHTS } from '../../constants';
 import { formatPrice, pluralize, isNewShoe } from '../../utils';
 import Spacer from '../Spacer';
+import Flag from "../Flag/Flag";
 
 const ShoeCard = ({
   slug,
@@ -34,9 +35,12 @@ const ShoeCard = ({
   return (
     <Link href={`/shoe/${slug}`}>
       <Wrapper>
-        <ImageWrapper>
-          <Image alt="" src={imageSrc} />
-        </ImageWrapper>
+        <ContentWrapper>
+          <ImageWrapper>
+            <Image alt="" src={imageSrc} />
+          </ImageWrapper>
+          <Flag type={variant}/>
+        </ContentWrapper>
         <Spacer size={12} />
         <Row>
           <Name>{name}</Name>
@@ -59,6 +63,10 @@ const Link = styled.a`
 
 const Wrapper = styled.article`
   margin-bottom: 32px; 
+`;
+
+const ContentWrapper = styled.div`
+  position: relative;
 `;
 
 const ImageWrapper = styled.div`
